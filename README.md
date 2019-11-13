@@ -1,4 +1,4 @@
-<img align="right" src="https://raw.githubusercontent.com/layer5io/meshery/master/ui/static/img/meshery-logo-shadow.svg" />
+<a href="https://layer5.io/meshery"><img align="left" src="https://raw.githubusercontent.com/layer5io/meshery/master/ui/static/img/meshery-logo/meshery-logo-light-text.png"  width="25%" /></a>
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/layer5/meshery-istio.svg)](https://hub.docker.com/r/layer5/meshery-istio)
 [![Go Report Card](https://goreportcard.com/badge/github.com/layer5io/meshery-istio)](https://goreportcard.com/report/github.com/layer5io/meshery-istio)
@@ -9,8 +9,8 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/layer5.svg?label=Follow&style=social)](https://twitter.com/intent/follow?screen_name=mesheryio)
 [![Slack](http://slack.layer5.io/badge.svg)](http://slack.layer5.io)
 
-# meshery-istio
-Meshery Adapter for Istio
+# meshery-nsx-sm
+Meshery Adapter for NSX-SM
 
 ><p align="center"><i>If you’re using Meshery or if you like the project, please ★ star this repository to show your support! 🤩</i></p>
 
