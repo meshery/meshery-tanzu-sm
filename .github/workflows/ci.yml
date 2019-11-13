@@ -1,4 +1,4 @@
-name: Meshery-Istio
+name: Meshery-NSX-SM
 on:
   push:
     branches:
