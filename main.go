@@ -25,8 +25,8 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/layer5io/meshery-istio/istio"
-	mesh "github.com/layer5io/meshery-istio/meshes"
+	mesh "github.com/layer5io/meshery-nsx-sm/meshes"
+	"github.com/layer5io/meshery-nsx-sm/nsx-sm"
 )
 
 var (
@@ -55,7 +55,7 @@ func main() {
 	s := grpc.NewServer(
 	// grpc.Creds(credentials.NewServerTLSFromCert(&insecure.Cert)),
 	)
-	mesh.RegisterMeshServiceServer(s, &istio.Client{})
+	mesh.RegisterMeshServiceServer(s, &nsx-sm.Client{})
 
 	// Serve gRPC Server
 	logrus.Infof("Serving gRPC on %s", addr)
