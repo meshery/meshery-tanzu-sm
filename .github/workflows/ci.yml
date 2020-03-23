@@ -22,7 +22,7 @@ jobs:
       uses: actions/setup-go@v1
       with:
         go-version: ${{ secrets.GO_VERSION }}
-    - run: GOPROXY=direct GOSUMDB=off go get -u golang.org/x/lint/golint; go list ./... | grep -v /vendor/ | xargs -L1 /home/runner/go/bin/golint -set_exit_status
+    # - run: GOPROXY=direct GOSUMDB=off go get -u golang.org/x/lint/golint; go list ./... | grep -v /vendor/ | xargs -L1 /home/runner/go/bin/golint -set_exit_status
 #   error_check:
 #     name: Error check
 #     runs-on: ubuntu-latest
@@ -102,7 +102,7 @@ jobs:
       uses: actions/setup-go@v1
       with:
         go-version: ${{ secrets.GO_VERSION }}
-    - run: GOPROXY=direct GOSUMDB=off GO111MODULE=on go build .
+    # - run: GOPROXY=direct GOSUMDB=off GO111MODULE=on go build .
   docker:
     name: Docker build and push
     runs-on: ubuntu-latest

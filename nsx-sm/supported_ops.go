@@ -12,9 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package istio
+package nsx-sm
 
-import "github.com/layer5io/meshery-istio/meshes"
+import "github.com/layer5io/meshery-nsx-sm/meshes"
 
 type supportedOperation struct {
 	// a friendly name
@@ -26,9 +26,9 @@ type supportedOperation struct {
 
 const (
 	customOpCommand                          = "custom"
-	runVet                                   = "istio_vet"
-	installIstioCommand                      = "istio_install"
-	installmTLSIstioCommand                  = "istio_mtls_install"
+	runVet                                   = "nsx-sm_vet"
+	installnsx-smCommand                      = "nsx-sm_install"
+	installmTLSnsx-smCommand                  = "nsx-sm_mtls_install"
 	installBookInfoCommand                   = "install_book_info"
 	cbCommand                                = "cb1"
 	installSMI                               = "install_smi"
@@ -45,25 +45,25 @@ const (
 )
 
 var supportedOps = map[string]supportedOperation{
-	installIstioCommand: {
-		name: "Latest Istio without mTLS",
-		// templateName: "install_istio.tmpl",
+	installnsx-smCommand: {
+		name: "Latest nsx-sm without mTLS",
+		// templateName: "install_nsx-sm.tmpl",
 		opType: meshes.OpCategory_INSTALL,
 	},
-	installmTLSIstioCommand: {
-		name:   "Latest Istio with mTLS",
+	installmTLSnsx-smCommand: {
+		name:   "Latest nsx-sm with mTLS",
 		opType: meshes.OpCategory_INSTALL,
 	},
 	installBookInfoCommand: {
 		name: "Book Info Application",
-		// templateName: "install_istio.tmpl",
+		// templateName: "install_nsx-sm.tmpl",
 		opType: meshes.OpCategory_SAMPLE_APPLICATION,
 	},
 	runVet: {
-		name:   "Run istio-vet",
+		name:   "Run nsx-sm-vet",
 		opType: meshes.OpCategory_VALIDATE,
-		// templateName: "istio_vet.tmpl",
-		// appLabel:     "istio-vet",
+		// templateName: "nsx-sm_vet.tmpl",
+		// appLabel:     "nsx-sm-vet",
 		// returnLogs:   true,
 	},
 	cbCommand: {
@@ -105,7 +105,7 @@ var supportedOps = map[string]supportedOperation{
 		templateName: "book_info_product_page_circuit_breaking.tmpl",
 	},
 	installSMI: {
-		name:   "Service Mesh Interface (SMI) Istio Adapter",
+		name:   "Service Mesh Interface (SMI) nsx-sm Adapter",
 		opType: meshes.OpCategory_INSTALL,
 	},
 	installHTTPBin: {

@@ -1,11 +1,11 @@
-module github.com/layer5io/meshery-istio
+module github.com/layer5io/meshery-nsx-sm
 
 go 1.13
 
 require (
 	github.com/Azure/go-autorest/autorest/adal v0.6.0 // indirect
-	github.com/aspenmesh/istio-client-go v0.0.0-20190426173040-3e73c27b9ace
-	github.com/aspenmesh/istio-vet v0.0.0-20190708155745-fac74e54e2e6
+	github.com/aspenmesh/nsx-sm-client-go v0.0.0-20190426173040-3e73c27b9ace
+	github.com/aspenmesh/nsx-sm-vet v0.0.0-20190708155745-fac74e54e2e6
 	github.com/cnf/structhash v0.0.0-20180104161610-62a607eb0224 // indirect
 	github.com/ghodss/yaml v1.0.0
 	github.com/gogo/protobuf v1.3.0 // indirect
@@ -27,7 +27,7 @@ require (
 	golang.org/x/tools v0.0.0-20191005014404-c9f9432ec4b2 // indirect
 	google.golang.org/grpc v1.23.0
 	gopkg.in/inf.v0 v0.9.1 // indirect
-	istio.io/api v0.0.0-20190905172106-906cbe6415a5 // indirect
+	nsx-sm.io/api v0.0.0-20190905172106-906cbe6415a5 // indirect
 	k8s.io/api v0.0.0-20190313235455-40a48860b5ab // indirect
 	k8s.io/apimachinery v0.0.0-20190313205120-d7deff9243b1
 	k8s.io/client-go v11.0.0+incompatible

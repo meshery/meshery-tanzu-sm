@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: smi-adapter-istio
-  namespace: istio-system
+  name: smi-adapter-nsx-sm
+  namespace: nsx-sm-system
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: smi-adapter-istio
+      name: smi-adapter-nsx-sm
   template:
     metadata:
       labels:
-        name: smi-adapter-istio
+        name: smi-adapter-nsx-sm
       annotations:
-        sidecar.istio.io/inject: "false"
+        sidecar.nsx-sm.io/inject: "false"
     spec:
-      serviceAccountName: smi-adapter-istio
+      serviceAccountName: smi-adapter-nsx-sm
       containers:
-        - name: smi-adapter-istio
-          image: layer5/smi-istio:latest
+        - name: smi-adapter-nsx-sm
+          image: layer5/smi-nsx-sm:latest
           command:
-          - smi-adapter-istio
+          - smi-adapter-nsx-sm
           imagePullPolicy: Always
           env:
             - name: WATCH_NAMESPACE
@@ -30,4 +30,4 @@ spec:
                 fieldRef:
                   fieldPath: metadata.name
             - name: OPERATOR_NAME
-              value: "smi-adapter-istio"
+              value: "smi-adapter-nsx-sm"
