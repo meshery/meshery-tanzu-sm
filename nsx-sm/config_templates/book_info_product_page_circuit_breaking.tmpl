@@ -1,4 +1,4 @@
-apiVersion: networking.istio.io/v1alpha3
+apiVersion: networking.nsx-sm.io/v1alpha3
 kind: DestinationRule
 metadata:
   name: productpage
@@ -10,7 +10,7 @@ spec:
     name: v1
   trafficPolicy:
     tls:
-      mode: ISTIO_MUTUAL
+      mode: NSX-SM_MUTUAL
     connectionPool:
       tcp:
         maxConnections: 1

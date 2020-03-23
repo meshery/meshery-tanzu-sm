@@ -1,4 +1,4 @@
-package istio
+package nsx-sm
 
 import (
 	"testing"
