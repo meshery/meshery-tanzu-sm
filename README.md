@@ -19,12 +19,12 @@
 [![GitHub issues by-label](https://img.shields.io/github/issues/layer5io/meshery-tanzu-sm/help%20wanted.svg)](https://github.com/layer5io/meshery-tanzu-sm/issues?q=is%3Aopen+is%3Aissue+label%3A"help+wanted")
 [![Website](https://img.shields.io/website/https/layer5.io/meshery.svg)](https://layer5.io/meshery/)
 [![Twitter Follow](https://img.shields.io/twitter/follow/layer5.svg?label=Follow&style=social)](https://twitter.com/intent/follow?screen_name=mesheryio)
-[![Slack](http://slack.layer5.io/badge.svg)](http://slack.layer5.io)
+[![Slack](https://img.shields.io/badge/Slack-@layer5.svg?logo=slack)](https://slack.meshery.io)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/3564/badge)](https://bestpractices.coreinfrastructure.org/projects/3564)
 
 <p style="clear:both;">
 <h2><a href="https://layer5.io/meshery">Meshery</a></h2>
-<a href="https://meshery.io"><img src="img/readme/meshery-logo.svg"
+<a href="https://meshery.io"><img src="img\readme\meshery-logo.svg"
 style="margin:10px;" width="125px" 
 alt="Meshery - the Service Mesh Management Plane" align="left" /></a>
 <a href="https://meshery.io">Meshery</a> is the multi-service mesh management plane offering lifecycle management of more types of service meshes than any other tool available today. Meshery facilitates adopting, configuring, operating and managing performance of different service meshes and incorporates the collection and display of metrics from applications running on top of any service mesh. 
