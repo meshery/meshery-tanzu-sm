@@ -1,6 +1,6 @@
 module github.com/layer5io/meshery-nsx-sm
 
-go 1.13
+go 1.21
 
 require (
 	github.com/Azure/go-autorest/autorest/adal v0.6.0 // indirect

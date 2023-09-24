@@ -1,4 +1,4 @@
-FROM golang:1.13.1 as bd
+FROM golang:1.21 as bd
 RUN adduser --disabled-login --gecos "" appuser
 WORKDIR /github.com/layer5io/meshery-nsx-sm
 ADD . .

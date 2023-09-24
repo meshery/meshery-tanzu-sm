@@ -19,7 +19,7 @@ jobs:
       with:
         fetch-depth: 1
     - name: Setup Go
-      uses: actions/setup-go@v1
+      uses: actions/setup-go@v3
       with:
         go-version: ${{ secrets.GO_VERSION }}
     - run: GOPROXY=direct GOSUMDB=off go get -u golang.org/x/lint/golint; go list ./... | grep -v /vendor/ | xargs -L1 /home/runner/go/bin/golint -set_exit_status 
@@ -32,7 +32,7 @@ jobs:
 #       with:
 #         fetch-depth: 1
 #     - name: Setup Go
-#       uses: actions/setup-go@v1
+#       uses: actions/setup-go@v3
 #       with:
 #         go-version: ${{ secrets.GO_VERSION }}
 #     - run: GOPROXY=direct GOSUMDB=off GO111MODULE=on go get -u github.com/kisielk/errcheck; /home/runner/go/bin/errcheck ./...
@@ -45,7 +45,7 @@ jobs:
 #       with:
 #         fetch-depth: 1
 #     - name: Setup Go
-#       uses: actions/setup-go@v1
+#       uses: actions/setup-go@v3
 #       with:
 #         go-version: ${{ secrets.GO_VERSION }}
 #     - run: GOPROXY=direct GOSUMDB=off GO111MODULE=on go get -u honnef.co/go/tools/cmd/staticcheck; /home/runner/go/bin/staticcheck -checks all ./... # https://staticcheck.io/docs/checks
@@ -58,7 +58,7 @@ jobs:
 #       with:
 #         fetch-depth: 1
 #     - name: Setup Go
-#       uses: actions/setup-go@v1
+#       uses: actions/setup-go@v3
 #       with:
 #         go-version: ${{ secrets.GO_VERSION }}
 #     - run: GOPROXY=direct GOSUMDB=off GO111MODULE=on go vet ./...
@@ -71,7 +71,7 @@ jobs:
 #       with:
 #         fetch-depth: 1
 #     - name: Setup Go
-#       uses: actions/setup-go@v1
+#       uses: actions/setup-go@v3
 #       with:
 #         go-version: ${{ secrets.GO_VERSION }}
 #     - run: GOPROXY=direct GOSUMDB=off GO111MODULE=on go get github.com/securego/gosec/cmd/gosec; /home/runner/go/bin/gosec ./... # https://github.com/securego/gosec
@@ -85,7 +85,7 @@ jobs:
 #       with:
 #         fetch-depth: 1
 #     - name: Setup Go
-#       uses: actions/setup-go@v1
+#       uses: actions/setup-go@v3
 #       with:
 #         go-version: ${{ secrets.GO_VERSION }}
 #     - run: GOPROXY=direct GOSUMDB=off GO111MODULE=on go test ./...
@@ -99,7 +99,7 @@ jobs:
       with:
         fetch-depth: 1
     - name: Setup Go
-      uses: actions/setup-go@v1
+      uses: actions/setup-go@v3
       with:
         go-version: ${{ secrets.GO_VERSION }}
     - run: GOPROXY=direct GOSUMDB=off GO111MODULE=on go get -u github.com/kisielk/errcheck; /home/runner/go/bin/errcheck -tags draft ./...
