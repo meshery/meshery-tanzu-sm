@@ -12,7 +12,7 @@
 
 # Meshery Adapter for Tanzu Service Mesh
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/layer5/meshery-nsx-sm.svg)](https://hub.docker.com/r/layer5/meshery-nsx-sm)
+[![Docker Pulls](https://img.shields.io/docker/pulls/meshery/meshery-tanzu-sm.svg)](https://hub.docker.com/r/meshery/meshery-tanzu-sm)
 [![Go Report Card](https://goreportcard.com/badge/github.com/layer5io/meshery-tanzu-sm)](https://goreportcard.com/report/github.com/layer5io/meshery-tanzu-sm)
 [![Build Status](https://github.com/layer5io/meshery-tanzu-sm/workflows/Meshery-Tanzusnx-SM/badge.svg)](https://github.com/layer5io/meshery-tanzu-sm/actions)
 [![GitHub](https://img.shields.io/github/license/layer5io/meshery-tanzu-sm.svg)](LICENSE)
