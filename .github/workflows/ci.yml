@@ -1,4 +1,4 @@
-name: Meshery-NSX-SM
+name: meshery-tanzu-sm
 on:
   push:
     branches:
@@ -19,7 +19,7 @@ jobs:
       with:
         fetch-depth: 1
     - name: Setup Go
-      uses: actions/setup-go@v1
+      uses: actions/setup-go@master
       with:
         go-version: ${{ secrets.GO_VERSION }}
     - run: GOPROXY=direct GOSUMDB=off go get -u golang.org/x/lint/golint; go list ./... | grep -v /vendor/ | xargs -L1 /home/runner/go/bin/golint -set_exit_status 
@@ -32,7 +32,7 @@ jobs:
 #       with:
 #         fetch-depth: 1
 #     - name: Setup Go
-#       uses: actions/setup-go@v1
+#       uses: actions/setup-go@master
 #       with:
 #         go-version: ${{ secrets.GO_VERSION }}
 #     - run: GOPROXY=direct GOSUMDB=off GO111MODULE=on go get -u github.com/kisielk/errcheck; /home/runner/go/bin/errcheck ./...
@@ -45,7 +45,7 @@ jobs:
 #       with:
 #         fetch-depth: 1
 #     - name: Setup Go
-#       uses: actions/setup-go@v1
+#       uses: actions/setup-go@master
 #       with:
 #         go-version: ${{ secrets.GO_VERSION }}
 #     - run: GOPROXY=direct GOSUMDB=off GO111MODULE=on go get -u honnef.co/go/tools/cmd/staticcheck; /home/runner/go/bin/staticcheck -checks all ./... # https://staticcheck.io/docs/checks
@@ -58,7 +58,7 @@ jobs:
 #       with:
 #         fetch-depth: 1
 #     - name: Setup Go
-#       uses: actions/setup-go@v1
+#       uses: actions/setup-go@master
 #       with:
 #         go-version: ${{ secrets.GO_VERSION }}
 #     - run: GOPROXY=direct GOSUMDB=off GO111MODULE=on go vet ./...
@@ -71,7 +71,7 @@ jobs:
 #       with:
 #         fetch-depth: 1
 #     - name: Setup Go
-#       uses: actions/setup-go@v1
+#       uses: actions/setup-go@master
 #       with:
 #         go-version: ${{ secrets.GO_VERSION }}
 #     - run: GOPROXY=direct GOSUMDB=off GO111MODULE=on go get github.com/securego/gosec/cmd/gosec; /home/runner/go/bin/gosec ./... # https://github.com/securego/gosec
@@ -85,7 +85,7 @@ jobs:
 #       with:
 #         fetch-depth: 1
 #     - name: Setup Go
-#       uses: actions/setup-go@v1
+#       uses: actions/setup-go@master
 #       with:
 #         go-version: ${{ secrets.GO_VERSION }}
 #     - run: GOPROXY=direct GOSUMDB=off GO111MODULE=on go test ./...
@@ -99,7 +99,7 @@ jobs:
       with:
         fetch-depth: 1
     - name: Setup Go
-      uses: actions/setup-go@v1
+      uses: actions/setup-go@master
       with:
         go-version: ${{ secrets.GO_VERSION }}
     - run: GOPROXY=direct GOSUMDB=off GO111MODULE=on go get -u github.com/kisielk/errcheck; /home/runner/go/bin/errcheck -tags draft ./...
@@ -133,7 +133,7 @@ jobs:
         docker push ${{ secrets.IMAGE_NAME }}:stable-${GITHUB_SHA::7}
     - name: Docker Hub Description
       if: github.event_name != 'pull_request' && startsWith(github.ref, 'refs/tags/') && success()
-      uses: peter-evans/dockerhub-description@v2.0.0
+      uses: peter-evans/dockerhub-description@2.0.0
       env:
         DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKERHUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
